@@ -1,4 +1,5 @@
 # hackathonUSP-2s2018
 
 Nosso projetop.
-Gustavo, tsu e felipe.
+Felipe Noronha
+Rafael Tsuha
