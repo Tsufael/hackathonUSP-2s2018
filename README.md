@@ -1,6 +1,7 @@
 # hackathonUSP-2s2018
 
-Nosso projetop.  
+Nosso projetop!  
 Felipe Noronha  
 Rafael Tsuha  
-Gustavo Bastos
+Gustavo Bastos  
+Guilherme Moreno
