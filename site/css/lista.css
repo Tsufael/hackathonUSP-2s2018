@@ -153,36 +153,36 @@ html,body {
   font-size: 15px;
   color: #AAAAAA;
 }
-.inbox-messages {
+.lista-messages {
   margin-top:60px;
 }
 .message-preview {
   margin-top: 60px;
 }
-.inbox-messages .card {
+.lista-messages .card {
   width: 100%;
 }
-.inbox-messages strong {
+.lista-messages strong {
   color: #5D5D5D;
 }
-.inbox-messages .msg-check {
+.lista-messages .msg-check {
   padding: 0 20px;
 }
-.inbox-messages .msg-subject {
+.lista-messages .msg-subject {
   padding: 10px 0;
   color: #5D5D5D;
 }
-.inbox-messages .msg-attachment {
+.lista-messages .msg-attachment {
   float:right;
 }
-.inbox-messages .msg-snippet {
+.lista-messages .msg-snippet {
   padding: 5px 20px 0px 5px;
 }
-.inbox-messages .msg-subject .fa {
+.lista-messages .msg-subject .fa {
   font-size: 14px;
   padding:3px 0;
 }
-.inbox-messages .msg-timestamp {
+.lista-messages .msg-timestamp {
   float: right;
   padding: 0 20px;
   color: #5D5D5D;
