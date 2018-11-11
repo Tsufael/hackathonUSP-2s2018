@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>lista - Free Bulma template</title>
+    <title>Licitações</title>
     <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon.png">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
@@ -35,10 +35,12 @@
                 <a class="navbar-item" href="denuncias.html">
                     Denúncias
                 </a>
-                <a class="navbar-item" href="lstLic.html">
+                <a class="navbar-item" href="licitacoes.html">
                     Licitações
                 </a>
-
+                <a class="navbar-item" href="abertas.html">
+                    Abertas
+                </a>
                 <div class="navbar-item has-dropdown is-hoverable">
                     <a class="navbar-link" href="/documentation/overview/start/">
                         Ajuda
@@ -68,14 +70,8 @@
             </div>
         </div>
     </nav>
-    <button id="b1" name="denunciar">Denuncie</button>
-    <script type="text/javascript">
-    document.querySelector("#b1").addEventListener("click", function() {
-        window.location.href = "denuncias.html?titulo=EtiquetaParaImpressora&origem=origem:Reitoria&data=09/03/2018&valor=R$1889,30";
-    }, false);
-    </script>
     <div class="columns" id="mail-app">
-        <aside class="column is-3 aside hero is-fullheight">
+        <aside class="column is-2 aside hero is-fullheight">
             <div class="filtros">
                 <div class="titulo-filtros">
                     <h2>Filtros:</h2>
@@ -84,13 +80,12 @@
                 <div class="field">
                     <div class="control">
                         <div class="select is-primary">
-                            <select>
+                            <select v-model="selected1" v-on:change="t()">
                                 <option>Todos</option>
-                                <option>ESALQ</option>
-                                <option>IME</option>
-                                <option>IRI</option>
                                 <option>FFLCH</option>
-                                <option>FAU</option>
+                                <option>FMVZ</option>
+                                <option>Politécnica</option>
+                                <option>Reitoria</option>
                             </select>
                         </div>
                     </div>
@@ -99,28 +94,21 @@
                 <div class="field">
                     <div class="control">
                         <div class="select is-primary">
-                            <select>
+                            <select v-model="selected2" v-on:change="t()">
                                 <option>Todos</option>
-                                <option>ESALQ</option>
-                                <option>IME</option>
-                                <option>IRI</option>
-                                <option>FFLCH</option>
-                                <option>FAU</option>
+                                <option>2017/2018</option>
+                                <option>2018/2019</option>
                             </select>
                         </div>
                     </div>
                 </div>
-                <p class="subtitulo"> Tipo:
+                <p class="subtitulo"> Ordernar Votos:
                 <div class="field">
                     <div class="control">
                         <div class="select is-primary">
-                            <select>
-                                <option>Todos</option>
-                                <option>ESALQ</option>
-                                <option>IME</option>
-                                <option>IRI</option>
-                                <option>FFLCH</option>
-                                <option>FAU</option>
+                            <select v-model="selected3" v-on:change="t()">
+                                <option>Crescente</option>
+                                <option>Decrescente</option>
                             </select>
                         </div>
                     </div>
@@ -128,6 +116,12 @@
 
             </div>
         </aside>
+
+        <script>
+function myFunction() {
+    console.log("deu certo!");
+}
+</script>
         <div class="column is-4 messages hero is-fullheight" id="message-feed">
             <div class="titulo">
                 <h1> Licitações </h1>
@@ -152,9 +146,8 @@
                 <div v-for="(msg, index) in messages" class="card" v-bind:id="'msg-card-'+index" v-on:click="showMessage(msg,index)" v-bind:data-preview-id="index">
                     <div class="card-content">
                         <div class="msg-header">
-                            <span class="msg-from"><small>From: {{ msg.from }}</small></span>
+                            <span class="msg-from"><small>{{ msg.from }}</small></span>
                             <span class="msg-timestamp"></span>
-                            <span class="msg-attachment"><i class="fa fa-paperclip"></i></span>
                         </div>
                         <div class="msg-subject">
                             <span class="msg-subject"><strong id="fake-subject-1">{{ msg.subject }}</strong></span>
@@ -167,33 +160,16 @@
             </div>
         </div>
         <div class="column is-6 message hero is-fullheight is-hidden" id="message-pane">
-            <div class="action-buttons">
-                <div class="control is-grouped">
-                    <a class="button is-small"><i class="fa fa-lista"></i></a>
-                    <a class="button is-small"><i class="fa fa-exclamation-circle"></i></a>
-                    <a class="button is-small"><i class="fa fa-trash-o"></i></a>
-                </div>
-                <div class="control is-grouped">
-                    <a class="button is-small"><i class="fa fa-exclamation-circle"></i></a>
-                    <a class="button is-small"><i class="fa fa-trash-o"></i></a>
-                </div>
-                <div class="control is-grouped">
-                    <a class="button is-small"><i class="fa fa-folder"></i></a>
-                    <a class="button is-small"><i class="fa fa-tag"></i></a>
-                </div>
-            </div>
+            
             <div class="box message-preview">
                 <div class="top">
-                    <div class="avatar">
-                        <img src="https://placehold.it/128x128">
-                    </div>
-                    <div class="address">
-                        <div class="name">John Smith</div>
-                        <div class="email">someone@gmail.com</div>
-                    </div>
-                    <hr>
-                    <div class="content">
-                    </div>
+                    <div class="content"></div>
+                </div>
+            </div>
+            <div class="action-buttons">
+                <div class="control is-grouped-centered is-center">
+                    <a class="button is-large"><i class="fa fa-level-up"></i></a>
+                    <a class="button is-large"><i class="fa fa-level-down"></i></a>
                 </div>
             </div>
         </div>
@@ -224,19 +200,67 @@
             window.paginate = {
                 total: Math.random() * (54236 - 100) + 3
             }
+
+            var items = [
+                ["Reitoria","Reitoria","Reitoria","Reitoria","Escola Politécnica","Escola Politécnica"
+                    ,"Escola Politécnica","FMVZ", "FMVZ", "FFLCH"],
+                ["A Reitoria da Universidade de São Paulo abriu EDITAL DE PREGÃO no dia 09 de março de 2018 para a " +
+                "contratação do serviços: Serviço de divulgação e promoção " +
+                "Quantidade/duração: 6 meses \n Preço: R$1889,30",
+                "A Reitoria da Universidade de São Paulo abriu EDITAL DE PREGÃO no dia 18 de janeiro de 2018 para a \n" + 
+                "compra dos seguintes itens: ETIQUETA IMPRESSORA " +
+                "Quantidade/duração: 32 unidades \n Preço: R$350,00",
+                "A Reitoria da Universidade de São Paulo abriu EDITAL DE PREGÃO no dia 18 de novembro de 2018 para a \n" + 
+                "compra dos seguintes itens: BOBINA DE PAPEL \n" +
+                "Quantidade/duração: 5 unidades \n Preço: R$200,00",
+                "A Reitoria da Universidade de São Paulo abriu EDITAL DE PREGÃO no dia 18 de novembro de 2018 para a \n " + 
+                "compra dos seguintes itens: BOBINA DE PAPEL \n " +
+                "Quantidade/duração: 5 unidades \n Preço: R$200,00",
+                "A Reitoria da Universidade de São Paulo abriu EDITAL DE PREGÃO no dia 24 de outubro de 2018 para a \n " +
+                "compra dos seguintes itens: CAFÉ TRADICIONAL \n " +
+                "Quantidade/duração: 20 unidades \n Preço: R$300,00",
+                "A Faculdade de Direiro abriu EDITAL DE PREGÃO no dia 23 de novembro de 2018 para a compra dos " +"seguintes itens: CAFÉ ESPECIAL \n " +
+                "Quantidade/duração: 42 unidades \n Preço: R$556,32",
+                "A Reitoria da Universidade de São Paulo abriu EDITAL DE PREGÃO no dia 09 de março de 2018 para a \n " +
+                "contratação do serviços: Serviço de divulgação e promoção \n " +
+                "Quantidade/duração: 6 meses \n Preço: R$1889,30", "A Reitoria da Universidade de São Paulo abriu " + 
+                " EDITAL DE PREGÃO no dia 18 de janeiro de 2018 para a compra dos seguintes itens: ETIQUETA IMPRESSORA \n " + 
+                " Quantidade/duração: 32 unidades \n Preço: R$350,00",
+                "A Reitoria da Universidade de São Paulo abriu EDITAL DE PREGÃO no dia 18 de novembro de 2018 para a " + 
+                "compra dos seguintes itens: BOBINA DE PAPEL \n" +
+                "Quantidade/duração: 5 unidades \n Preço: R$200,00",
+                "A Reitoria da Universidade de São Paulo abriu EDITAL DE PREGÃO no dia 18 de novembro de 2018 para a " +
+                "compra dos seguintes itens: BOBINA DE PAPEL \n " +
+                "Quantidade/duração: 5 unidades \n Preço: R$200,00",
+                "A Reitoria da Universidade de São Paulo abriu EDITAL DE PREGÃO no dia 24 de outubro de 2018 para a " +
+                "compra dos seguintes itens: CAFÉ TRADICIONAL \n "+
+                "Quantidade/duração: 20 unidades \n Preço: R$300,00",
+                "A Faculdade de Direiro abriu EDITAL DE PREGÃO no dia 23 de novembro de 2018 para a compra dos " +
+                "seguintes itens: CAFÉ ESPECIAL \n " +
+                "Quantidade/duração: 42 unidades \n Preço: R$556,32"]];
+
+                var titulo = ["Etiqueta para impressora", "Bobina de papel", "Café tradicional",
+                                "Café especial", "Serviço de divulgação", "Etiqueta impressora", "Bobina de papel", 
+                                "Bobina de papel",
+                                "Café tradicional", "Café especial"];
+
+
+
             for (var i = 0; i <= 10; i++) {
                 window.lista[i] = {
-                    from: faker.name.findName(),
+                    from: items[0][i],
                     timestamp: null,
-                    subject: faker.lorem.sentence().substring(0, 40),
-                    snippet: faker.lorem.lines(),
-                    fullMail: window.faker.lorem.paragraphs(faker.random.number(40)),
+                    subject: titulo[i],
+                    fullMail: items[1][i],
                     email: faker.internet.email()
                 };
             }
             var listaVue = new Vue({
                 el: '#mail-app',
                 data: {
+                    selected1: "Todos",
+                    selected2: "Todos",
+                    selected3: "Decrescente",
                     messages: window.lista,
                     paginate: {
                         pointer: {
@@ -254,17 +278,25 @@
                         $('.message .address .name').text(msg.from);
                         $('.message .address .email').text(msg.email);
                         var msg_body = '<p>' +
-                            msg.snippet +
-                            '</p>' +
-                            '<br>' +
-                            '<p>' +
                             msg.fullMail +
                             '</p>';
-                        $('.message .content').html(msg_body);
+                        $('.content').html(msg_body);
+                    },
+                    t: function() {
+                    if(this.selected1 == "Todos") for (var i = 0; i <= 10; i++) {
+                        $('#message-pane').addClass('is-hidden');
+                        window.lista[i] = {
+                        from: items[0][i],
+                        timestamp: null,
+                        subject: faker.lorem.sentence().substring(0, 40),
+                        fullMail: window.faker.lorem.paragraphs(faker.random.number(40)),
+                        endmail: faker.internet.email()
+                        }
+                    };
+                };
                     }
                 }
             });
-        });
     </script>
 </body>
 
