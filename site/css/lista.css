@@ -54,12 +54,12 @@
   color: white;
   background-color: #27a4a3;
   padding: 2.5rem 1.25rem;
-  border-right: 1px solid #DEDEDE;
+  border-right: auto solid #DEDEDE;
 }
 .messages {
   display:block;
   background-color: #fff;
-  border-right: 1px solid #DEDEDE;
+  border-right: auto solid #DEDEDE;
 }
 .message {
   display:block;
@@ -125,7 +125,7 @@
 }
 .aside .main .icon {
   font-size: 19px;
-  padding-right: 30px;
+  padding-right: auto;
   color: #A0A0A0;
 }
 .aside .main .name {
@@ -152,7 +152,7 @@
 }
 .action-buttons .control.is-grouped {
   display: inline-block;
-  margin-right: 30px;
+  margin-right: auto;
 }
 .action-buttons .control.is-grouped:last-child {
   margin-right: 0;
@@ -164,7 +164,7 @@
   border-radius: 0 5px 5px 0;
 }
 .action-buttons .control.is-grouped .button {
-  margin-right: -5px;
+  margin-right: auto;
   border-radius: 0;
 }
 .pg {

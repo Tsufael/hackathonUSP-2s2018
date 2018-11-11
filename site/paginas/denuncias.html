@@ -1,185 +1,179 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Denúncia</title>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css" />
-		<link rel="stylesheet" type="text/css" href="../css/lista.css">
-		<script type="text/javascript" src="../javaescriptos/denuncia.js"></script>
-	</head>
-	<body>
-		<nav id="nbGreen" class="navbar">
-		<div class="navbar-brand">
-			<a class="navbar-item">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Denúncia</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/lista.css">
+    <script type="text/javascript" src="../javaescriptos/denuncia.js"></script>
+</head>
+
+<body>
+    <nav id="nbGreen" class="navbar">
+        <div class="navbar-brand">
+            <a class="navbar-item">
 				<img src="../images/logo.png" alt="Bulma: a modern CSS framework based on Flexbox" width="112" height="28">
 			</a>
-			<div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
-				<span></span>
-				<span></span>
-				<span></span>
-			</div>
-		</div>
-
-		<div id="navbarExampleTransparentExample" class="navbar-menu">
-			<div class="navbar-start">
-				<a class="navbar-item" href="inicio.html">
+            <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div id="navbarExampleTransparentExample" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="inicio.html">
 					Início
 				</a>
-				<a class="navbar-item" href="denuncias.html">
+                <a class="navbar-item" href="denuncias.html">
 					Denúncias
 				</a>
-				<a class="navbar-item" href="licitacoes.html">
+                <a class="navbar-item" href="licitacoes.html">
 					Licitações
 				</a>
-				<a class="navbar-item" href="abertas.html">
+                <a class="navbar-item" href="abertas.html">
 					Abertas
 				</a>
-				<div class="navbar-item has-dropdown is-hoverable">
-					<a class="navbar-link">
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">
 						Ajuda
 					</a>
-					<div class="navbar-dropdown is-boxed">
-						<a class="navbar-item" href="expLicitacao.html">
+                    <div class="navbar-dropdown is-boxed">
+                        <a class="navbar-item" href="expLicitacao.html">
 							O que é licitação?
 						</a>
-						<a class="navbar-item" href="sbrNos.html">
+                        <a class="navbar-item" href="sbrNos.html">
 							Sobre nós
 						</a>
-						<a class="navbar-item" href="contato.html">
+                        <a class="navbar-item" href="contato.html">
 							Contato
 						</a>
-					</div>
-				</div>
-			</div>
-
-			<div class="navbar-end">
-				<div class="navbar-item">
-					<div class="field">
-						<div class="control">
-							<input class="input" type="text" placeholder="Busca . . .">
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</nav>
-
-		<section class="aside">
-			<div class="columns"	>
-				<div class="column is-4 aside">
-					<aside class="menu">
-						<a id="titulo" class="button is-primary is-block is-alt is-large" href="#"></a>
-						<p class="menu-label">
-							Tags
-						</p>
-
-						<ul class="menu-list">
-							<li><span id="origem" class="tag is-link is-medium "></span></li>
-							<li><span id="valor" class="tag is-primary is-medium ">valor: </span></li>
-							<li><span id="data" class="tag is-link is-medium ">data: </span></li>
-
-							<script type="text/javascript">
-								for( var i in params ){
-    								console.log( i , params[i] );
-    								var x = document.getElementById(i);
-    								x.innerHTML = x.innerHTML + params[i];
-								}
-							</script>
-
-
-						</ul>
-					</aside>
-				</div>
-				<div class="column is-9">
-					<div class="box content">
-						<section class="section">
-		<div class="container has-text-centered">
-			<h2 class="title" style="text-align:left;">Denúncia</h2>
-			<p style="text-align:left; margin:0px;">Para denunciar uma licitação inclua abaixo os dados</p><p style="text-align:left;">de um orçamento alternativo com discrepância de valor</p>
-			<form>
-				<div class="field is-horizontal">
-					<div class="field-body">
-						<div class="field">
-							<p style="text-align:left;">Nome da Empresa:</p>
-							<p class="control has-icons-left">
-								<input class="input" type="text" placeholder="Name">
-								<span class="icon is-small is-left">
+                    </div>
+                </div>
+            </div>
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="field">
+                        <div class="control">
+                            <input class="input" type="text" placeholder="Busca . . .">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section class="aside">
+        <div class="columns">
+            <div class="column is-4 aside">
+                <aside class="menu">
+                    <a id="titulo" class="button is-primary is-block is-alt is-large" href="#"></a>
+                    <p class="menu-label">
+                        Tags
+                    </p>
+                    <ul class="menu-list">
+                        <li><span id="origem" class="tag is-link is-medium "></span></li>
+                        <li><span id="valor" class="tag is-primary is-medium ">valor: </span></li>
+                        <li><span id="data" class="tag is-link is-medium ">data: </span></li>
+                        <script type="text/javascript">
+                        for (var i in params) {
+                            console.log(i, params[i]);
+                            var x = document.getElementById(i);
+                            x.innerHTML = x.innerHTML + params[i];
+                        }
+                        </script>
+                    </ul>
+                </aside>
+            </div>
+            <div class="column is-8">
+                <div class="box content">
+                    <section class="section">
+                        <div class="container has-text-centered">
+                            <h2 class="title" style="text-align:left; font-size:3vw"">Denúncia</h2>
+                            <p style="text-align:left;">Para denunciar uma licitação inclua abaixo os dados</p>
+                            <p style="text-align:left;">de um orçamento alternativo com discrepância de valor</p>
+                            <form>
+                                <div class="field is-horizontal">
+                                    <div class="field-body">
+                                        <div class="field">
+                                            <p style="text-align:left;">Nome da Empresa:</p>
+                                            <p class="control has-icons-left">
+                                                <input class="input" type="text" placeholder="Name" style="width:65%">
+                                                <span class="icon is-small">
 									<svg class="svg-inline--fa fa-user fa-w-16" aria-hidden="true" data-prefix="fas" data-icon="user" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M256 0c88.366 0 160 71.634 160 160s-71.634 160-160 160S96 248.366 96 160 167.634 0 256 0zm183.283 333.821l-71.313-17.828c-74.923 53.89-165.738 41.864-223.94 0l-71.313 17.828C29.981 344.505 0 382.903 0 426.955V464c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48v-37.045c0-44.052-29.981-82.45-72.717-93.134z"></path></svg><!-- <i class="fas fa-user"></i> -->
 								</span>
-							</p>
-						</div>
-
-					</div>
-				</div>
-				<div class="field is-horizontal">
-					<div class="field-body">
-						<div class="field">
-							<p style="text-align:left;">Contato da empresa:</p>
-							<p class="control has-icons-left has-icons-right">
-								<input class="input" type="email" placeholder="Email ou telefone (99) 9999-9999">
-								<span class="icon is-small is-left">
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="field is-horizontal">
+                                    <div class="field-body">
+                                        <div class="field">
+                                            <p style="text-align:left;">Contato da empresa:</p>
+                                            <p class="control has-icons-left has-icons-right">
+                                                <input class="input" type="email" placeholder="Email ou telefone (99) 9999-9999" style="width:65%">
+                                                <span class="icon is-small is-left">
 									<svg class="svg-inline--fa fa-envelope fa-w-16" aria-hidden="true" data-prefix="fas" data-icon="envelope" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"></path></svg><!-- <i class="fas fa-envelope"></i> -->
 								</span>
-							</p>
-						</div>
-					</div>
-				</div>
-				<p style="text-align:left;">Orçamento:</p>
-				<div class="field is-horizontal">
-					<div class="field-body">
-						<div class="field">
-							<div class="control">
-								<textarea class="textarea" placeholder="Copie e cole o orçamento aqui"></textarea>
-							</div>
-						</div>
-					</div>
-				</div>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p style="text-align:left;">Orçamento:</p>
+                                <div class="field is-horizontal">
+                                    <div class="field-body">
+                                        <div class="field">
+                                            <div class="control"  style="width:65%">
+                                                <textarea class="textarea" placeholder="Copie e cole o orçamento aqui"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="field is-horizontal">
+                                    <div class="field-body">
+                                        <div class="field">
+                                            <div class="control">
+                                                <button class="button is-primary">
+                                                    Enviar
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="content has-text-centered">
+                <div class="columns is-mobile is-centered">
+                    <div class="field is-grouped is-grouped-multiline">
+                        <div class="control">
+                            <div class="tags has-addons">
+                                <a class="tag is-link" href="https://github.com/dansup/bulma-templates">Bulma Templates</a>
+                                <span class="tag is-light">Daniel Supernault</span>
+                            </div>
+                        </div>
+                        <div class="control">
+                            <div class="tags has-addons">
+                                <a class="tag is-link">The source code is licensed</a>
+                                <span class="tag is-light">MIT &nbsp;<i class="fa fa-github"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script async type="text/javascript" src="../javaescriptos/bulma.js"></script>
+</body>
 
-				<div class="field is-horizontal">
-					<div class="field-body">
-						<div class="field">
-							<div class="control">
-								<button class="button is-primary">
-									Enviar
-								</button>
-							</div>
-						</div>
-					</div>
-				</div>
-			</form>
-		</div>
-	</section>
-
-					</div>
-				</div>
-			</div>
-		</section>
-		<footer class="footer">
-			<div class="container">
-				<div class="content has-text-centered">
-					<div class="columns is-mobile is-centered">
-						<div class="field is-grouped is-grouped-multiline">
-							<div class="control">
-								<div class="tags has-addons">
-									<a class="tag is-link" href="https://github.com/dansup/bulma-templates">Bulma Templates</a>
-									<span class="tag is-light">Daniel Supernault</span>
-								</div>
-							</div>
-							<div class="control">
-								<div class="tags has-addons">
-									<a class="tag is-link">The source code is licensed</a>
-									<span class="tag is-light">MIT &nbsp;<i class="fa fa-github"></i></span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</footer>
-		<script async type="text/javascript" src="../javaescriptos/bulma.js"></script>
-	</body>
 </html>

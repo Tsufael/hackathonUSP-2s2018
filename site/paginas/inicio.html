@@ -2,199 +2,179 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Início</title>
-	<!-- Bulma Version 0.7.2-->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css" />
-	<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js"></script>
-	<link rel="stylesheet" type="text/css" href="../css/inicio.css">
-
-	<link rel="stylesheet" href="../css/odometer-theme-default.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Início</title>
+    <!-- Bulma Version 0.7.2-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css" />
+    <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/inicio.css">
+    <link rel="stylesheet" href="../css/odometer-theme-default.css" />
 </head>
+
 <body>
-	<nav id="nbGreen" class="navbar">
-		<div class="navbar-brand">
-			<a class="navbar-item">
+    <nav id="nbGreen" class="navbar">
+        <div class="navbar-brand">
+            <a class="navbar-item">
 				<img src="../images/logo.png" alt="Bulma: a modern CSS framework based on Flexbox" width="112" height="28">
 			</a>
-			<div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
-				<span></span>
-				<span></span>
-				<span></span>
-			</div>
-		</div>
-
-		<div id="navbarExampleTransparentExample" class="navbar-menu">
-			<div class="navbar-start">
-				<a class="navbar-item" href="inicio.html">
+            <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div id="navbarExampleTransparentExample" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="inicio.html">
 					Início
 				</a>
-				<a class="navbar-item" href="denuncias.html">
+                <a class="navbar-item" href="denuncias.html">
 					Denúncias
 				</a>
-				<a class="navbar-item" href="licitacoes.html">
+                <a class="navbar-item" href="licitacoes.html">
 					Licitações
 				</a>
-				<a class="navbar-item" href="abertas.html">
+                <a class="navbar-item" href="abertas.html">
 					Abertas
 				</a>
-				<div class="navbar-item has-dropdown is-hoverable">
-					<a class="navbar-link">
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">
 						Ajuda
 					</a>
-					<div class="navbar-dropdown is-boxed">
-						<a class="navbar-item" href="expLicitacao.html">
+                    <div class="navbar-dropdown is-boxed">
+                        <a class="navbar-item" href="expLicitacao.html">
 							O que é licitação?
 						</a>
-						<a class="navbar-item" href="sbrNos.html">
+                        <a class="navbar-item" href="sbrNos.html">
 							Sobre nós
 						</a>
-						<a class="navbar-item" href="contato.html">
+                        <a class="navbar-item" href="contato.html">
 							Contato
 						</a>
-					</div>
-				</div>
-			</div>
-
-			<div class="navbar-end">
-				<div class="navbar-item">
-					<div class="field">
-						<div class="control">
-							<input class="input" type="text" placeholder="Busca . . .">
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</nav>
-
-
-	<section id="sesPr" class="section">
-
-		<br>
-
-		<div class="container has-text-centered">
-			<h1 class="title" style="font-size:9vw"><font color="white">Economizômetro</font></h1>
-		</div>
-
-		<br> <br>
-
-		<div class="container has-text-centered">			
-			<p class="odometer" id="odometer1" style="font-size:9vw"></p>			
-		</div>
-		
-		<br> <br>
-
-		<div class="container has-text-centered">
-			<p style="font-size:2vw"><font color="white">quantidade de dinheiro que poderia ter sido economizada.</font></p>			
-		</div>
-
-		<script>
-		  setTimeout(function(){
-		    var elem = document.getElementById("odometer1");
-		    elem.innerHTML = 5893213;
-		  }, 1000);
-
-			window.odometerOptions = {
-			  format: 'ddd,ddd,ddd.dd',
-			};
-		</script>
-		<script src="../javaescriptos/odometer.js"></script>
-
-	<br> <br> <br> <br> <br>
-	</section>
-
-	<section class="section">
-
-	<br><br>
-
-	<div class="columns">
-		<div class="card has-background-light" style="width: 1000px;">
-		  <div class="card-content">
-		    <p class="title">
-		      Você sabe o que é uma licitação?
-		    </p>
-		    <p class="subtitle">
-		      Licitação é o processo administrativo responsável pela escolha da empresa apta a ser contratada pela administração pública para o fornecimento de seus produtos e / ou serviços.
-		    </p>
-		  </div>
-		  <footer class="card-footer">
-		    <p class="card-footer-item">
-		      <span>
-		        <a href="expLicitacao.html">Saiba mais →</a>
-		      </span>
-		    </p>
-		  </footer>
-		</div>
-	</section>
-
-	<br><br>
-
-	<section class="section">			
-		 <div id="sesPr" class="columns is-centered" style="padding: 2rem">
-		 	
-            <div class="column">
-            	<br><br>
-                <div class="card">
-                     <div class="card-content">
-					    <p class="title">
-					      Denúncias
-					    </p>
-					    <br>
-					    <p class="subtitle">
-					      Veja as pricipais denuncias em aberto sobre licitações e ajude a classifica-las.
-					    </p>
-					  </div>
-					  <footer class="card-footer">
-					    <p class="card-footer-item">
-					      <span>
-					        <a href="lstDenuncia.html">Veja →</a>
-					      </span>
-					    </p>
-					  </footer>
+                    </div>
                 </div>
             </div>
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="field">
+                        <div class="control">
+                            <input class="input" type="text" placeholder="Busca . . .">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section id="sesPr" class="section">
+        <br>
+        <div class="container has-text-centered">
+            <h1 class="title" style="font-size:9vw"><font color="white">Economizômetro</font></h1>
+        </div>
+        <br> <br>
+        <div class="container has-text-centered">
+            <p class="odometer" id="odometer1" style="font-size:9vw"></p>
+        </div>
+        <br> <br>
+        <div class="container has-text-centered">
+            <p style="font-size:2vw">
+                <font color="white">quantidade de dinheiro que poderia ter sido economizada.</font>
+            </p>
+        </div>
+        <script>
+        setTimeout(function() {
+            var elem = document.getElementById("odometer1");
+            elem.innerHTML = 5893213;
+        }, 1000);
 
+        window.odometerOptions = {
+            format: 'ddd,ddd,ddd.dd',
+        };
+        </script>
+        <script src="../javaescriptos/odometer.js"></script>
+        <br> <br> <br> <br> <br>
+    </section>
+    <section class="section">
+        <br><br>
+        <div class="columns">
+            <div class="card has-background-light" style="width: 1000px;">
+                <div class="card-content">
+                    <p class="title">
+                        Você sabe o que é uma licitação?
+                    </p>
+                    <p class="subtitle">
+                        Licitação é o processo administrativo responsável pela escolha da empresa apta a ser contratada pela administração pública para o fornecimento de seus produtos e / ou serviços.
+                    </p>
+                </div>
+                <footer class="card-footer">
+                    <p class="card-footer-item">
+                        <span>
+		        <a href="expLicitacao.html">Saiba mais →</a>
+		      </span>
+                    </p>
+                </footer>
+            </div>
+    </section>
+    <br><br>
+    <section class="section">
+        <div id="sesPr" class="columns is-centered" style="padding: 2rem">
             <div class="column">
-            	<br><br>
+                <br><br>
                 <div class="card">
-                      <div class="card-content">
-					    <p class="title">
-					      Participe
-					    </p>
-					    <br>
-					    <p class="subtitle">
-					      Presta serviços? Saiba como participar do processo de licitações da USP.
-					    </p>
-					  </div>
-					  <footer class="card-footer">
-					    <p class="card-footer-item">
-					      <span>
+                    <div class="card-content">
+                        <p class="title">
+                            Denúncias
+                        </p>
+                        <br>
+                        <p class="subtitle">
+                            Veja as pricipais denuncias em aberto sobre licitações e ajude a classifica-las.
+                        </p>
+                    </div>
+                    <footer class="card-footer">
+                        <p class="card-footer-item">
+                            <span>
+					        <a href="lstDenuncia.html">Veja →</a>
+					      </span>
+                        </p>
+                    </footer>
+                </div>
+            </div>
+            <div class="column">
+                <br><br>
+                <div class="card">
+                    <div class="card-content">
+                        <p class="title">
+                            Participe
+                        </p>
+                        <br>
+                        <p class="subtitle">
+                            Presta serviços? Saiba como participar do processo de licitações da USP.
+                        </p>
+                    </div>
+                    <footer class="card-footer">
+                        <p class="card-footer-item">
+                            <span>
 					        <a href="lstAberta.html">Saiba mais →</a>
 					      </span>
-					    </p>
-					  </footer>
+                        </p>
+                    </footer>
                 </div>
                 <br><br>
             </div>
-
-	</section>
-
-
-	<footer class="footer">
-		<div class="container">
-			<div class="content has-text-centered">
-				<p>
-					<a href="https://bulma.io">
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="content has-text-centered">
+                <p>
+                    <a href="https://bulma.io">
 						<img src="https://bulma.io/images/made-with-bulma.png" alt="Made with Bulma" width="128" height="24">
 					</a>
-				</p>
-			</div>
-		</div>
-	</footer>
-		<script src="../javaescriptos/bulma.js"></script>
+                </p>
+            </div>
+        </div>
+    </footer>
+    <script src="../javaescriptos/bulma.js"></script>
 </body>
 
 </html>
