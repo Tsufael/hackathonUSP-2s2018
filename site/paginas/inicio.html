@@ -12,7 +12,7 @@
 	<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js"></script>
 	<link rel="stylesheet" type="text/css" href="../css/inicio.css">
 
-	<link rel="stylesheet" href=".../css/odometer.min.css" />
+	<link rel="stylesheet" href="../css/odometer-theme-default.css" />
 </head>
 <body>
 	<nav id="nbGreen" class="navbar">
@@ -42,11 +42,11 @@
 					Abertas
 				</a>
 				<div class="navbar-item has-dropdown is-hoverable">
-					<a class="navbar-link" href="/documentation/overview/start/">
+					<a class="navbar-link">
 						Ajuda
 					</a>
 					<div class="navbar-dropdown is-boxed">
-						<a class="navbar-item" href="tutorial.html">
+						<a class="navbar-item" href="expLicitacao.html">
 							O que é licitação?
 						</a>
 						<a class="navbar-item" href="https://bulma.io/documentation/modifiers/syntax/">
@@ -77,29 +77,39 @@
 		<br>
 
 		<div class="container has-text-centered">
-			<h1 class="title" style="font-size:8vw"><font color="white">Economizômetro</font></h1>
+			<h1 class="title" style="font-size:9vw"><font color="white">Economizômetro</font></h1>
 		</div>
 
+		<br> <br>
 
-		<div id="odometer1" class="odometer.odometer-auto-theme">0</div>
-
-		<script src=".../javaescriptos/odometer.js">
-			var element = document.getElementById("odometer1");
-			element.innerHTML = 123
-		</script>
-
+		<div class="container has-text-centered">			
+			<p class="odometer" id="odometer1" style="font-size:9vw"></p>			
+		</div>
 		
+		<br> <br>
+
 		<div class="container has-text-centered">
-			<p style="font-size:1.5vw"><font color="white">quantidade de dinheiro que poderia ter sido economizada.</font></p>
+			<p style="font-size:2vw"><font color="white">quantidade de dinheiro que poderia ter sido economizada.</font></p>			
 		</div>
 
+		<script>
+		  setTimeout(function(){
+		    var elem = document.getElementById("odometer1");
+		    elem.innerHTML = 5893213;
+		  }, 1000);
 
-	<br> <br> 
+			window.odometerOptions = {
+			  format: 'ddd,ddd,ddd.dd',
+			};
+		</script>
+		<script src="../javaescriptos/odometer.js"></script>
+
+	<br> <br> <br> <br> <br>
 	</section>
 
 	<section class="section">
 
-	<br><br><br><br>
+	<br><br>
 
 	<div class="columns">
 		<div class="card has-background-light" style="width: 1000px;">
@@ -185,7 +195,7 @@
 			</div>
 		</div>
 	</footer>
-		<script src="../js/bulma.js"></script>
+		<script src="../javaescriptos/bulma.js"></script>
 </body>
 
 </html>
