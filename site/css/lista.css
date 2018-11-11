@@ -92,6 +92,12 @@
   padding: 10px 0;
   color: #6F7B7E;
 }
+.select {
+    width: 7rem;
+}
+.opt {
+    width: 7rem;
+}
 .filtros {
     background-color: #218989;
     padding-left: 2rem;
@@ -179,7 +185,7 @@
   text-decoration: none;
 }
 .is-grouped .button {
-  background-image: linear-gradient(#F8F8F8, #F1F1F1);
+  background-color: #F8F8F8;
 }
 .is-grouped .button .fa {
   font-size: 15px;
