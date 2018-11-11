@@ -65,7 +65,7 @@
   display:block;
   background-color: #fff;
 }
-.aside .compose {
+.aside .compose {        console.log("caraio");
   height: 95px;
   margin:0 -10px;
   padding: 25px 30px;
@@ -212,6 +212,11 @@
 }
 .lista-messages .msg-attachment {
   float:right;
+}
+#b1 {
+    position: absolute;
+    left: 80%;
+    top: 30%;
 }
 .lista-messages .msg-snippet {
   padding: 5px 20px 0px 5px;
