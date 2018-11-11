@@ -1,21 +1,24 @@
-html,body {
+/* html,body {
   font-family: 'Open Sans', serif;
   font-size: 14px;
   line-height: 1.5;
   height: 100%;
   background-color: #fff;
+} */
+.navbar.is-dark{
+    background-color: #239291;
 }
 .nav.is-dark {
-  background-color: #232B2D;
+  background-color: #239291;
   color: #F6F7F7;
 }
 .nav.is-dark .nav-item a, .nav.is-dark a.nav-item {
-    color: #F6F7F7;
+  color: #F6F7F7;
 }
 .nav.is-dark .nav-item a.button.is-default {
-    color: #F6F7F7;
-    background-color: transparent;
-    border-width: 2px;
+  color: #F6F7F7;
+  background-color: transparent;
+  border-width: 2px;
 }
 .nav.menu {
   border-bottom: 1px solid #e1e1e1;
@@ -37,9 +40,20 @@ html,body {
 .nav.menu .nav-item.is-active .icon-btn .fa {
   color: #2EB398;
 }
+#nbGreen {
+  background-color: #239291;
+  color: white;
+  /*  navbar */
+}
+#sesPr {
+  /* primeiro scroll */
+  background-color: #27a4a3;
+}
 .aside {
   display:block;
-  background-color: #F9F9F9;
+  color: white;
+  background-color: #27a4a3;
+  padding: 2.5rem 1.25rem;
   border-right: 1px solid #DEDEDE;
 }
 .messages {
@@ -78,6 +92,21 @@ html,body {
   padding: 10px 0;
   color: #6F7B7E;
 }
+.filtros {
+    background-color: #218989;
+    padding-left: 2rem;
+    padding-bottom: 2rem;
+}
+.titulo {
+    display: block;
+    padding: 10px 10px 20px 10px;
+    font-size: 2rem;
+    /* background-color: lightgray; */
+}
+.titulo-filtros {
+    padding: 10px 10px 20px 10px;
+    font-size: 1.5rem;
+}
 .aside .main .item.active {
   background-color: #F1F1F1;
   margin: 0 -50px;
@@ -98,8 +127,11 @@ html,body {
   color: #5D5D5D;
   font-weight: 500;
 }
+.inactive {
+    color: #FFFFFF !important;
+}
 .messages {
-  padding: 40px 20px;
+  padding: 2.5rem 1.25rem;
 }
 .message {
   padding: 40px 20px;
