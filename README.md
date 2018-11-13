@@ -11,4 +11,4 @@ Integrantes:
 - Felipe Noronha - IME  
 - Rafael Tsuha - IME
 - Gustavo Bastos - IME
-- Guilherme Moreno - ICMC
+- Guilherme Moreno - EACH
